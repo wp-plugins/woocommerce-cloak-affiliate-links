@@ -16,10 +16,10 @@ Cloak your WooCommerce external & affiliate links.
 The *WooCommerce Cloak Affiliate Links* plugin allows you to mask all external links in your WooCommerce store.
 
 For example, change this...
-`http://www.merchant.com/index.php?aff_id=123&product_id=456`
+`merchant.com/index.php?aff_id=123&product_id=456`
 
 ... into this:
-`http://www.yoursite.com/go/123`
+`yoursite.com/go/123`
 
 Configure the status code for the redirect to either 301, 302 or 307.
 
@@ -41,13 +41,8 @@ There's a lot of debate about this.  I would suggest Googling this and seeing wh
 
 == Screenshots ==
 
-= Settings =
-
-`/assets/screenshot-1.png`
-
-= Permalinks =
-
-`/assets/screenshot-2.png`
+1. Settings
+2. Permalinks
 
 == Changelog ==
 

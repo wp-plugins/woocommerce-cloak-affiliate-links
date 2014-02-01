@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: WooCommerce Cloak Affiliate Links
-Version: 1.0.0
+Version: 1.0.1
 Plugin URI: https://v4.datafeedr.com
 Description: Cloak your WooCommerce external & affiliate links.
-Author: Datafeedr
+Author: datafeedr.com
 Author URI: https://v4.datafeedr.com
 License: GPL v3
 
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * Define constants.
  */
-define( 'WCCAL_VERSION', 	'1.0.0' );
+define( 'WCCAL_VERSION', 	'1.0.1' );
 define( 'WCCAL_URL', 		plugin_dir_url( __FILE__ ) );
 define( 'WCCAL_PATH', 		plugin_dir_path( __FILE__ ) );
 define( 'WCCAL_BASENAME', 	plugin_basename( __FILE__ ) );
@@ -44,6 +44,9 @@ if ( ! class_exists( 'Wccal' ) ) {
 	class Wccal {
 	
 		public function __construct() {
+		
+			register_activation_hook( __FILE__, array( $this, 'activate_plugin' ) );
+			register_deactivation_hook( __FILE__, array( $this, 'deactivate_plugin' ) );
 		
 			$this->base 	= $this->get_affiliate_base();
 			$this->options 	= $this->load_options();
@@ -61,6 +64,20 @@ if ( ! class_exists( 'Wccal' ) ) {
 			add_action( 'admin_menu', 					array( $this, 'options_page' ) );
 			add_action( 'admin_init', 					array( $this, 'register_settings' ) );
 			add_action( 'wccal_clickthrough', 			array( $this, 'count_clickthrough' ) );
+		}
+		
+		/**
+		 * Flush rerwrite rules on plugin activation.
+		 */		
+		function activate_plugin() {
+			flush_rewrite_rules();
+		}
+
+		/**
+		 * Flush rerwrite rules on plugin deactivation.
+		 */	
+		function deactivate_plugin() {
+			flush_rewrite_rules();
 		}
 		
 		/**

@@ -5,7 +5,7 @@ Tags: woocommerce, affiliate, links, cloak, mask, redirect, external, url, urls,
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9945A9PLQ7P46
 Requires at least: 3.8
 Tested up to: 3.8
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,7 +46,11 @@ There's a lot of debate about this.  I would suggest Googling this and seeing wh
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.1 =
+* Changed author name to "datafeedr.com"
+* Flushed rewrite rules on plugin activation/deactivation.
+
+= 1.0.0 =
 * Initial release.
 
 == Upgrade Notice ==

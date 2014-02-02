@@ -4,7 +4,7 @@ Plugin Name: WooCommerce Cloak Affiliate Links
 Version: 1.0.1
 Plugin URI: https://v4.datafeedr.com
 Description: Cloak your WooCommerce external & affiliate links.
-Author: datafeedr.com
+Author: datafeedr
 Author URI: https://v4.datafeedr.com
 License: GPL v3
 

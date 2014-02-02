@@ -1,6 +1,6 @@
 === WooCommerce Cloak Affiliate Links ===
 
-Contributors: datafeedrcom
+Contributors: datafeedr
 Tags: woocommerce, affiliate, links, cloak, mask, redirect, external, url, urls, rewrite, datafeedr, sellfire, popshops
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9945A9PLQ7P46
 Requires at least: 3.8

@@ -1,15 +1,15 @@
 <?php
 /*
 Plugin Name: WooCommerce Cloak Affiliate Links
-Version: 1.0.1
+Version: 1.0.2
 Plugin URI: https://v4.datafeedr.com
 Description: Cloak your WooCommerce external & affiliate links.
 Author: datafeedr.com
 Author URI: https://v4.datafeedr.com
 License: GPL v3
 
-Datafeedr API Plugin
-Copyright (C) 2013, Datafeedr
+WooCommerce Cloak Affiliate Links plugin
+Copyright (C) 2014, Datafeedr - eric@datafeedr.com
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * Define constants.
  */
-define( 'WCCAL_VERSION', 	'1.0.1' );
+define( 'WCCAL_VERSION', 	'1.0.2' );
 define( 'WCCAL_URL', 		plugin_dir_url( __FILE__ ) );
 define( 'WCCAL_PATH', 		plugin_dir_path( __FILE__ ) );
 define( 'WCCAL_BASENAME', 	plugin_basename( __FILE__ ) );
@@ -48,7 +48,7 @@ if ( ! class_exists( 'Wccal' ) ) {
 			register_activation_hook( __FILE__, array( $this, 'activate_plugin' ) );
 			register_deactivation_hook( __FILE__, array( $this, 'deactivate_plugin' ) );
 		
-			$this->base 	= $this->get_affiliate_base();
+			$this->base 	= self::get_affiliate_base();
 			$this->options 	= $this->load_options();
 			
 			add_filter( 'query_vars', 					array( $this, 'query_vars' ) );
@@ -97,7 +97,7 @@ if ( ! class_exists( 'Wccal' ) ) {
 		/**
 		 * Get the base permalink settings.
 		 */
-		public function get_affiliate_base() {
+		static public function get_affiliate_base() {
 			$permalinks = get_option( 'wccal_permalinks' );
 			if ( ! $permalinks || !isset( $permalinks['affiliate_base'] ) || $permalinks['affiliate_base'] == '' ) {
 				return 'redirect';

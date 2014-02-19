@@ -5,7 +5,7 @@ Tags: woocommerce, affiliate, links, cloak, mask, redirect, external, url, urls,
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9945A9PLQ7P46
 Requires at least: 3.8
 Tested up to: 3.8
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,10 @@ There's a lot of debate about this.  I would suggest Googling this and seeing wh
 2. Permalinks
 
 == Changelog ==
+
+= 1.0.2 =
+* Added "static" to static methods to meet Strict Standards.
+* Updated plugin information.
 
 = 1.0.1 =
 * Changed author name to "datafeedr.com"

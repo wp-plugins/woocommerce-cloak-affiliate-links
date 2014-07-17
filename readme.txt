@@ -3,11 +3,11 @@
 Contributors: datafeedr.com
 Tags: woocommerce, affiliate, links, cloak, mask, redirect, external, url, urls, rewrite, datafeedr, sellfire, popshops
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9945A9PLQ7P46
-Requires at least: 3.8
-Tested up to: 3.9
-Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Requires at least: 3.8
+Tested up to: 4.0-beta1
+Stable tag: 1.0.4
 
 Cloak your WooCommerce external & affiliate links.
 
@@ -45,6 +45,9 @@ There's a lot of debate about this.  I would suggest Googling this and seeing wh
 2. Permalinks
 
 == Changelog ==
+
+= 1.0.4 =
+* Added user_trailingslashit() function to returned redirect URL. (#9588)
 
 = 1.0.3 =
 * Updated 'tested up to' tag.
